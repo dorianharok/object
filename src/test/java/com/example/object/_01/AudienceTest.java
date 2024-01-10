@@ -1,6 +1,5 @@
 package com.example.object._01;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +23,7 @@ class AudienceTest {
     public void noInvitation() {
         Bag bag = new Bag(null, 1000L);
         Audience audience = new Audience(bag);
-        Long fee = audience.buy(new Ticket());
+        Long fee = audience.buy(new Ticket(1000L));
 
         assertEquals(1000L, fee);
         assertTrue(bag.hasTicket());
