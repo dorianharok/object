@@ -1,4 +1,4 @@
-package com.example.object._04;
+package com.example.object._04_data;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,6 +17,4 @@ public class Movie {
     private MovieType movieType;
     private Money discountAmount;
     private double discountPercent;
-
-
 }
