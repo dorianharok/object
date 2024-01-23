@@ -1,8 +1,13 @@
 package com.example.object._04;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 
+@Getter
+@Setter
 public class DiscountCondition {
     private DiscountConditionType type;
 
