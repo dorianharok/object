@@ -16,25 +16,15 @@ public class Movie {
     private double discountPercent;
 
     public Money calculateMovieFee(Screening screening) {
-        switch(movieType) {
-            case AMOUNT_DISCOUNT -> calculateAmountDiscountAmount();
-            case PERCENT_DISCOUNT -> calculatePercentDiscountAmount();
-            case NONE_DISCOUNT -> calculateNoneDiscountAmount();
+        if (isDiscountable(screening)) {
+            return fee.minus(calculateDiscountAmount());
         }
 
-        throw new IllegalStateException();
+        return fee;
     }
 
-    private Money calculateAmountDiscountAmount() {
-        return discountAmount;
-    }
-
-    private Money calculatePercentDiscountAmount() {
-        return fee.times(discountPercent);
-    }
-
-    private Money calculateNoneDiscountAmount() {
-        return Money.ZERO;
+    private Money calculateDiscountAmount() {
+        return null;
     }
 
     private boolean isDiscountable(Screening screening) {
