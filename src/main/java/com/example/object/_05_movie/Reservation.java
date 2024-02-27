@@ -1,2 +1,5 @@
-package com.example.object._05_movie;public class Reservation {
+package com.example.object._05_movie;
+
+public class Reservation {
+
 }
